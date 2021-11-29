@@ -52,10 +52,12 @@ export default extendTheme({
         },
         "header-link": {
           bg: "transparent",
-          color: "black",
-          h: 8,
+          color: "white",
+          fontFamily: "Raleway",
+          w: 20,
           _hover: {
             textDecoration: "underline",
+            fontWeight: "700",
           },
         },
         "header-button": {
@@ -93,10 +95,12 @@ export default extendTheme({
           },
         },
         solid: {
-          bg: "white",
-          color: "primary.300",
+          bg: "primary.400",
+          color: "white",
+          fontFamily: "Raleway",
+          fontSize: "sm",
           fontWeight: "700",
-          px: 8,
+          px: 12,
           _hover: {
             bg: "primary.300",
             color: "white",

@@ -1,16 +1,20 @@
 import React from "react";
-import {Stack, Text} from "@chakra-ui/react";
+import {Image, Stack, Text} from "@chakra-ui/react";
 interface Feature {
+  id: number;
+  picture: string;
   title: string;
   feature: string;
 }
-const FeaturesDescription = (props: Feature) => {
+const FeaturesCard = (props: Feature) => {
+  const imageSrc = `/assets/${props.picture}`;
   return (
     <>
-      <Stack alignItems={["center", "flex-start"]} className="FeaturesDescription" spacing={2}>
+      <Stack alignItems="center" className="FeaturesCard" spacing={2}>
+      <Image alt={props.title} src={imageSrc} />
         <Text
           as="h2"
-          color="primary.500"
+          color="white"
           fontSize="2xl"
           fontWeight="700"
           letterSpacing="-1px"
@@ -19,11 +23,11 @@ const FeaturesDescription = (props: Feature) => {
           {props.title}
         </Text>
         <Text
-          color="secondary.500"
+          color="white"
           fontSize="md"
           lineHeight="1.8"
-          maxWidth="container.md"
-          textAlign={["center", "left"]}
+          maxWidth="md"
+          textAlign="center"
         >
           {props.feature}
         </Text>
@@ -32,4 +36,4 @@ const FeaturesDescription = (props: Feature) => {
   );
 };
 
-export default FeaturesDescription;
+export default FeaturesCard;
