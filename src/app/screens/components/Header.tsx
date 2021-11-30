@@ -60,7 +60,7 @@ const Header = () => {
         
         paddingX={[6, 0]}
         position={["fixed", "relative"]}
-        width={["100%", "container.lg"]}
+        width={["100%", "container.xl"]}
         zIndex="100"
       >
         <Image alt="logo" height={[10, 10]} src="/assets/logo.svg" width={[24, 24]} />

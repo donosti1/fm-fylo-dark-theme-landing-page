@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack, SimpleGrid} from "@chakra-ui/react";
+import {Stack, SimpleGrid, Container} from "@chakra-ui/react";
 import FeaturesCard from "./components/FeaturesCard";
 
 const featuresItems = [
@@ -13,11 +13,11 @@ const features = featuresItems.map( (fe) =><FeaturesCard key={fe.id} {...fe}/>)
 const Features = () => {
   return (
     <>
-      <Stack className="Features" backgroundColor="secondary.700" width="100%" paddingY={16}>
+      <Container maxWidth="container.xl" className="Features" paddingY={16}>
         <SimpleGrid columns={[1,2]} rowGap={16}>
           {features}
         </SimpleGrid>
-      </Stack>
+      </Container>
     </>
   );
 };

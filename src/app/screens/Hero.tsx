@@ -26,7 +26,7 @@ const Hero = () => {
     >
       <Header />
       <Stack
-      width="40%" alignItems="center"
+      width="container.md" alignItems="center"
       paddingTop={[8, 16]}
       spacing={[4, 12]}>
         <Image alt="hero-image" src="/assets/illustration-intro.png"
