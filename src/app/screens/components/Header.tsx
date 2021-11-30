@@ -1,33 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  Button,
-  Image,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Stack,
-  StackDivider,
-  Text,
-} from "@chakra-ui/react";
-import {ChevronDownIcon} from "@chakra-ui/icons";
+import {Button, Container, Image, Stack} from "@chakra-ui/react";
 
 const Header = () => {
   const menuItems = [
     {id: 0, label: "Features"},
     {id: 1, label: "Team"},
-    {id: 2, label: "Sign In"}
+    {id: 2, label: "Sign In"},
   ];
-
-  interface menuComponents {
-    menuItems: {id: number; label: string}[];
-  };
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
@@ -48,26 +27,29 @@ const Header = () => {
       {mi.label}
     </Button>
   ));
+
   return (
     <>
-      <Stack
-        alignItems="center"
-        as="header"
-        backgroundColor={scrollPosition > 64 ? "hsla(355, 100%, 74%,.90)" : "transparent"}
-        className="Header"
-        direction="row"
-        justifyContent="space-between"
-        
-        paddingX={[6, 0]}
+      <Container
+        backgroundColor={scrollPosition > 64 ? "black" : "transparent"}
+        maxWidth={["container.sm", "container.xl"]}
+        paddingTop={[scrollPosition > 64 ? 0 : 6, 0]}
         position={["fixed", "relative"]}
-        width={["100%", "container.xl"]}
         zIndex="100"
       >
-        <Image alt="logo" height={[10, 10]} src="/assets/logo.svg" width={[24, 24]} />
-        <Stack direction="row" spacing={[2,6]}>
-          {menu}
+        <Stack
+          alignItems="center"
+          as="header"
+          className="Header"
+          direction="row"
+          justifyContent="space-between"
+        >
+          <Image alt="logo" height={[8, 10]} src="/assets/logo.svg" width={[20, 24]} />
+          <Stack direction="row" spacing={[2, 6]}>
+            {menu}
+          </Stack>
         </Stack>
-      </Stack>
+      </Container>
     </>
   );
 };

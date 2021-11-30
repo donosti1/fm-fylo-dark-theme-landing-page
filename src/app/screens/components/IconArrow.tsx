@@ -1,24 +1,16 @@
 import React from "react";
-import { Stack, Text } from "@chakra-ui/react";
 interface IIconArrowProps {
   fill?: string;
 }
 const IconArrow = (props: IIconArrowProps) => {
   return (
-    <svg width="25" height="25" viewBox=" 0 0 16 16" {...props}>
+    <svg height="25" viewBox=" 0 0 16 16" width="25" {...props}>
       <defs>
-        <circle id="b" cx="6" cy="6" r="6" />
-        <filter
-          x="-25%"
-          y="-25%"
-          width="150%"
-          height="150%"
-          filterUnits="objectBoundingBox"
-          id="a"
-        >
+        <circle cx="6" cy="6" id="b" r="6" />
+        <filter filterUnits="objectBoundingBox" height="150%" id="a" width="150%" x="-25%" y="-25%">
           <feColorMatrix
-            values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
             in="shadowBlurOuter1"
+            values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
           />
         </filter>
       </defs>

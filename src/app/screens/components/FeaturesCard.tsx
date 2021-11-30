@@ -8,27 +8,15 @@ interface Feature {
 }
 const FeaturesCard = (props: Feature) => {
   const imageSrc = `/assets/${props.picture}`;
+
   return (
     <>
-      <Stack alignItems="center" className="FeaturesCard" spacing={2}>
-      <Image alt={props.title} src={imageSrc} />
-        <Text
-          as="h2"
-          color="white"
-          fontSize="2xl"
-          fontWeight="700"
-          letterSpacing="-1px"
-          paddingBottom={[4, 0]}
-        >
+      <Stack alignItems="center" className="FeaturesCard" spacing={[4, 2]}>
+        <Image alt={props.title} src={imageSrc} />
+        <Text as="h2" fontSize={["xl", "2xl"]} fontWeight="700" letterSpacing="-1px">
           {props.title}
         </Text>
-        <Text
-          color="white"
-          fontSize="md"
-          lineHeight="1.8"
-          maxWidth="md"
-          textAlign="center"
-        >
+        <Text fontSize="md" lineHeight="1.8" maxWidth="md" textAlign="center">
           {props.feature}
         </Text>
       </Stack>
