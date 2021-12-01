@@ -43,6 +43,7 @@ const Header = () => {
           className="Header"
           direction="row"
           justifyContent="space-between"
+          role="navigation"
         >
           <Image alt="logo" height={[8, 10]} src="/assets/logo.svg" width={[20, 24]} />
           <Stack direction="row" spacing={[2, 6]}>

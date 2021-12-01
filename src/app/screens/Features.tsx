@@ -38,7 +38,7 @@ const features = featuresItems.map((fe) => <FeaturesCard key={fe.id} {...fe} />)
 const Features = () => {
   return (
     <>
-      <Container className="Features" maxWidth="container.xl" paddingY={16}>
+      <Container className="Features" maxWidth="container.xl" paddingY={16} role="main">
         <SimpleGrid columns={[1, 2]} rowGap={16}>
           {features}
         </SimpleGrid>

@@ -70,8 +70,9 @@ const Footer = () => {
       borderTopRightRadius={[0, 92]}
       paddingBottom={[16, 16]}
       paddingTop={[48, 64]}
+      role="contentinfo"
     >
-      <Container maxWidth="container.xl" spacing={[12, 44]}>
+      <Container maxWidth="container.xl">
         <Stack spacing={8}>
           <Image alt="logo" height={[20, 16]} src="assets/logo.svg" width={[40, 32]} />
           <Stack direction={["column", "row"]} spacing={[16, 2]}>

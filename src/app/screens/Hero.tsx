@@ -17,7 +17,6 @@ const Hero = () => {
       minHeight="100vh"
       paddingBottom={[0, 32]}
       paddingTop={[0, 16]}
-      role="header"
       spacing={0}
       width="100%"
     >

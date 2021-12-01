@@ -16,7 +16,7 @@ const TestimonialCard = (props: TestimonialsProps) => {
         our team has become a well-oiled collaboration machine.
       </Text>
       <Stack direction="row" spacing={4}>
-        <Avatar alt={props.name} name={props.name} size="md" src={avatarPic} />
+        <Avatar name={props.name} size="md" src={avatarPic} />
         <Stack justifyContent="space-around" spacing={0}>
           <Text fontSize={["xs", "inherit"]} fontWeight="700">
             {props.name}
@@ -57,6 +57,7 @@ const Testimonials: FunctionComponent = () => {
       className="Testimonials"
       maxWidth="container.xl"
       paddingTop={[16, 32]}
+      role="banner"
     >
       <SimpleGrid columns={[1, 3]} gap={[6, 16]}>
         {allTestimonials}

@@ -8,7 +8,7 @@ const BottomCTA: FunctionComponent<BottomCTAProps> = () => {
   const [hover, setHover] = useState(false);
 
   return (
-    <Container className="Features" maxWidth="container.xl" paddingY={16}>
+    <Container className="Features" maxWidth="container.xl" paddingY={16} role="banner">
       <SimpleGrid columns={[1, 2]} gap={16}>
         <Stack>
           <Image alt="hero-image" src="/assets/illustration-stay-productive.png" />
@@ -46,12 +46,17 @@ const BottomCTA: FunctionComponent<BottomCTAProps> = () => {
             color="primary.300"
             fontSize={["sm", "xl"]}
             px={0}
-            spacing={4}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
             See how Fylo works
-            <Stack height={6} justifyContent="center" paddingLeft={4}>
+            <Stack
+              as="span"
+              display="inline-block"
+              height={6}
+              justifyContent="center"
+              paddingLeft={4}
+            >
               <IconArrow fill={hover ? "white" : "primary.300"} />
             </Stack>
           </Button>

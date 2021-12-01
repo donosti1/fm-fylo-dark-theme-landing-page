@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Stack alignItems="center" position="relative" role="main" spacing={0}>
+      <Stack alignItems="center" spacing={0}>
         <Hero />
         <Features />
         <BottomCTA />
